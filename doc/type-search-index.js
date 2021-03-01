@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"craps","l":"ControlCraps"},{"p":"craps","l":"Dado"},{"p":"craps","l":"PrincipalCrasp"},{"p":"craps","l":"VistaConsola"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"craps","l":"ControlCraps"},{"p":"craps","l":"Dado"},{"p":"craps","l":"PrincipalCrasp"},{"p":"craps","l":"VistaConsola"},{"p":"craps","l":"VistaGUICraps"}];updateSearchResults();
