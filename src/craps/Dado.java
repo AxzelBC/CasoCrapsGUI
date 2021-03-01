@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class Dado {
 	
-	/** The cara visible. Valor (1 - 6) sacado por el ususario*/
+	/** The cara visible. Valor (1 - 6) sacado por el usuario*/
 	private int caraVisible;
 
 	/**

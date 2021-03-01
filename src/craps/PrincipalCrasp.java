@@ -7,6 +7,8 @@
 
 package craps;
 
+import java.awt.EventQueue;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class PrincipalCrasp.
@@ -21,8 +23,15 @@ public class PrincipalCrasp {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		VistaConsola consola = new VistaConsola();
-		consola.iniciarJuego();
+		
+		/*VistaConsola consola = new VistaConsola();
+		consola.iniciarJuego();*/
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				VistaGUICraps miVentana = new VistaGUICraps();
+			}
+		});
 	}
 
 }

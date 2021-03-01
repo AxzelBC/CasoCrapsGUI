@@ -13,12 +13,16 @@ package craps;
  */
 public class ControlCraps {
 
+	/** The dado 2. */
 	private Dado  dado1, dado2;
 	
+	/** The estado. */
 	private int tiro, punto, estado;
 	
-	private boolean lanzamiento;
+	/** The lanzamiento. */
+	private int lanzamiento;
 	
+	/** The caras dados. */
 	//Ejemplo de sintaxis de un arreglo
 	private int[] carasDados;
 	
@@ -29,7 +33,7 @@ public class ControlCraps {
 	public ControlCraps() {
 		dado1 = new Dado();
 		dado2 = new Dado();
-		lanzamiento = true; //Ronda de tiro
+		lanzamiento = 0; //Ronda de tiro
 		carasDados = new int[2];
 	}
 	
@@ -49,18 +53,18 @@ public class ControlCraps {
 	 * Determina el estado del juego: 1 = ganar, 2 = perder, 3 = punto
 	 */
 	public void determinarJuego() {
-		if(lanzamiento==true) {
+		if(lanzamiento==0) {
 			//Ronda de tiro
 			if(tiro==7 || tiro == 11) {
 				estado = 1; // Ganó
 			}
-			if(tiro==2 || tiro==3 || tiro==12) {
+			else if(tiro==2 || tiro==3 || tiro==12) {
 				estado = 2; // Perdió
 			}
 			else {
 				estado = 3; // Ronda de punto
 				punto = tiro;
-				lanzamiento = false;
+				lanzamiento = 1;
 			}
 		}
 		else {
@@ -76,11 +80,11 @@ public class ControlCraps {
 	private void rondaPunto() {
 		if(tiro==punto) {
 			estado = 1; // Ganó
-			lanzamiento = true;
+			lanzamiento = 0;
 		}
 		if(tiro==7) {
 			estado = 2; //Perdió
-			lanzamiento = true;
+			lanzamiento = 0;
 		}
 	}
 
@@ -90,7 +94,7 @@ public class ControlCraps {
 	 */
 	public void setAbandono() {
 		estado = 2;
-		lanzamiento = true;
+		lanzamiento = 0;
 	}
 	
 	/**

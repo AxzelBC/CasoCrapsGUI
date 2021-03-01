@@ -17,10 +17,13 @@ import java.util.Scanner;
  */
 public class VistaConsola {
 	
+	/** The control craps. */
 	private ControlCraps controlCraps;
 	
+	/** The pregunta. */
 	private String pregunta;
 	
+	/** The lectura datos. */
 	//Para lectura de datos
 	private Scanner lecturaDatos;
 	
